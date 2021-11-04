@@ -5,6 +5,6 @@
   }
   
 .gallery img{
-
-    width: 100%;
+    border-radius: 1vw;
+    border: 1vw solid #36a66863;
   } 
