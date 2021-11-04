@@ -1,0 +1,44 @@
+
+.project_list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap:15px;
+}
+
+#shooting{
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+}
+
+#covid{
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+}
+
+#django{
+    grid-column: 1 / -1;
+    grid-row: 3 / span 1;
+}
+
+.project{
+    border-radius: 3vw;
+    margin: 5vh 5vw;
+    text-decoration: none !important;
+}
+
+.project:hover{
+    background-color: rgba(86, 167, 106, 0.74);
+    border-radius: 3vw;
+}
+
+.img_container{
+    padding: 3vw;
+}
+
+.project_text{
+    font-size: 4vw;
+    color: rgb(42, 80, 61);
+    text-align: center;
+
+}

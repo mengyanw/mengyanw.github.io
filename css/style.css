@@ -1,0 +1,43 @@
+body{
+  font-family: "Roboto Mono", serif;
+  color: rgb(66, 192, 150);
+  font-size: 2.5vh;
+  background-color: #e5fdeb;
+}
+
+a:visited{
+  color: rgb(43, 112, 41);
+}
+
+nav{
+  padding: 3vw;
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav_item{
+  width: 6em;
+  text-align: center;
+}
+
+.current_link{
+  border: 2px dashed rgb(69, 194, 79);
+}
+
+footer {
+  background-color: rgb(194, 240, 180);
+  color: #a0b6a6;
+  font-size: 2.5vw;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+main{
+  margin: 5vh;
+  margin-bottom: 100px;
+}
