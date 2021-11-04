@@ -4,7 +4,10 @@ body{
   font-size: 2.5vh;
   background-color: #e5fdeb;
 }
-
+a{
+  color: rgb(43, 112, 41);
+  text-decoration: none; 
+}
 a:visited{
   color: rgb(43, 112, 41);
 }
@@ -25,7 +28,7 @@ nav{
 }
 
 .current_link{
-  border: 2px dashed rgb(69, 194, 79);
+  border: 2px solid #27792eb9;
 }
 
 footer {
