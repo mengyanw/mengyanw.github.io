@@ -4,10 +4,9 @@
     justify-content: center;
   }
   
-/* .gallery img{
+.gallery img{
     border-radius: 1vw;
     border: 1vw solid #36a66863;
-    margin: 10px 10px 10px 10px;
     width: 100%;
-    object-fit: cover;
-  }  */
+    margin: 10px;
+  } 
