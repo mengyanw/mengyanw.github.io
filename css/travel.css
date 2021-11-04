@@ -9,5 +9,5 @@
     border: 1vw solid #36a66863;
     margin: 10px 10px 10px 10px;
     width: 100%;
-    height: auto;
+    object-fit: cover;
   }
