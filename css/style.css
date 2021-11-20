@@ -10,6 +10,23 @@ body{
   background-color: black;
 }
 
+.skip{
+  background: #000000;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip:focus{
+  top:20px;
+  color: var(--main-bg-color);
+  text-decoration-style: solid;
+}
+
 a{
   color: var(--main-bg-color);
   text-decoration: none; 
@@ -39,7 +56,8 @@ nav{
 }
 
 .current_link a{
-  color: #7e8f76;
+  color: #b8b8b8;
+  text-decoration: underline;
 }
 
 footer {
@@ -85,24 +103,24 @@ main p {
 /* Project */
 .project_list{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
   grid-row-gap:15px;
 }
 
 #shooting{
-  grid-column: 1 / -1;
-  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
 }
 
 #covid{
-  grid-column: 1 / -1;
-  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
 }
 
 #django{
-  grid-column: 1 / -1;
-  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 2;
 }
 
 .project{
@@ -116,35 +134,32 @@ main p {
   border-radius: 3vw;
 }
 
-.img_container{
+
+.proj_img_container{
   padding: 3vw;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
 }
 
 .project_text{
-  font-size: 4vw;
+  font-size: 2vw;
   color: var(--main-bg-color);
   text-align: center;
 }
+
 /* Project End */
 
 /* Travel */
-main{
+.gallery {
   display: flex;
   flex-flow: row wrap;
-  flex-grow: 3;
-  row-gap: 20px;
-}
-.gallery {
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+
 }
 .gallery img{
   border-radius: 1vw;
   border: 1vw solid #7b753075;
-  width: 400px;
+  width: 320px;
+  margin: 12px;
 } 
 /* Travel End */
 
@@ -175,7 +190,7 @@ form legend{
 }
 
 label{
-  display: inline-block;
+  width: auto;
 }
 
 input, textarea {
@@ -184,11 +199,54 @@ input, textarea {
 }
 /* About End */
 
+/* Responsive */
 @media  screen and (max-width: 600px) {
+  /* Nav Bar */
+  nav {
+    display: flex;
+    justify-content: end;
+  }
+  .nav_links{
+    flex-flow: column wrap;
+  }
+
+
+  /* Form */
   label {
+    display: inline-block;
     width: 100%;
   }
+
+  /* Project */
+  #shooting{
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+  }
+  
+  #covid{
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+  }
+  
+  #django{
+    grid-column: 1 / -1;
+    grid-row: 3 / span 1;
+  }
+
+  .proj_img_container{
+    padding: 3vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  
+  .project_text{
+    font-size: 4vw;
+  }
 }
+/* Responsive End */
+
 
 
 
@@ -355,7 +413,7 @@ input, textarea {
     left: 86vw;
     animation-delay: 2s;
 }
-
+/* 
 #floating_background .moon li{
     width: 20px;
     height: 20px;
@@ -431,6 +489,6 @@ input, textarea {
 #floating_background .heart li:nth-child(4){
     left: 21vw;
     animation-delay: 2s;
-}
+} */
 
 /* Floating Background End*/
