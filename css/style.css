@@ -1,16 +1,26 @@
+:root {
+  --main-bg-color: #cad6b2;
+}
+/* General */
 body{
   font-family: "Roboto Mono", serif;
-  color: rgb(66, 192, 150);
+  color: var(--main-bg-color);
   font-size: 2.5vh;
-  background-color: #e5fdeb;
+  /* background-color: #effdf3; */
+  background-color: black;
 }
 
 a{
-  color: rgb(43, 112, 41);
+  color: var(--main-bg-color);
   text-decoration: none; 
 }
+
+a:hover{
+  text-decoration: underline; 
+}
+
 a:visited{
-  color: rgb(43, 112, 41);
+  color: var(--main-bg-color);
 }
 
 nav{
@@ -28,13 +38,13 @@ nav{
   text-align: center;
 }
 
-.current_link{
-  border: 2px solid #27792eb9;
+.current_link a{
+  color: #7e8f76;
 }
 
 footer {
-  background-color: rgb(194, 240, 180);
-  color: #a0b6a6;
+  background-color: #414642b2;
+  color: var(--main-bg-color);
   font-size: 2.5vw;
   position: fixed;
   bottom: 0;
@@ -45,3 +55,382 @@ main{
   margin: 5vh;
   margin-bottom: 100px;
 }
+
+#cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 1vw;
+  background-color: #637c36;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  /*transition: transform 0.3s ease;*/
+}
+
+html, a{
+  cursor: none;
+}
+
+/* General End */
+
+/* Index */
+main h1 {
+  font-size: 10vw;
+  padding-top: 30vh;
+}
+main p {
+  font-size: 3vw;
+}
+/* Index End */
+
+/* Project */
+.project_list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap:15px;
+}
+
+#shooting{
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+}
+
+#covid{
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+}
+
+#django{
+  grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+}
+
+.project{
+  border-radius: 3vw;
+  margin: 5vh 5vw;
+  text-decoration: none !important;
+}
+
+.project:hover{
+  background-color:#576d3075 ; 
+  border-radius: 3vw;
+}
+
+.img_container{
+  padding: 3vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.project_text{
+  font-size: 4vw;
+  color: var(--main-bg-color);
+  text-align: center;
+}
+/* Project End */
+
+/* Travel */
+main{
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 3;
+  row-gap: 20px;
+}
+.gallery {
+  justify-content: space-between;
+}
+.gallery img{
+  border-radius: 1vw;
+  border: 1vw solid #7b753075;
+  width: 400px;
+} 
+/* Travel End */
+
+
+/* About */
+#about_header{
+  background-attachment: fixed; /* Parallax effect */
+  background-position: 75% 25%; /* Parallax effect */
+  background-size: cover; /* Parallax effect */
+  color: white;
+  height: 800px; /* Parallax effect */
+  background-image: url("../images/about_header.JPG");
+  background-repeat: no-repeat;
+}
+
+form{
+  display: block;
+  background-color: rgb(58, 65, 47);
+  font-family: Courier, monospace;
+  font-size: 2.5vw;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+form legend{
+  font-weight: bold;
+}
+
+label{
+  display: inline-block;
+}
+
+input, textarea {
+  background-color: black;
+  color: var(--main-bg-color);
+}
+/* About End */
+
+@media  screen and (max-width: 600px) {
+  label {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Floating Background */
+
+/* color palette: 
+#c2c97c
+#c2a958
+#9d9b48
+#e0deb6
+#907d3d
+#7b7530
+#735b2a
+#b9ce22
+#443817
+#5c5620
+#5e4620 */
+
+/* Shape reference: https://css-tricks.com/the-shapes-of-css/ */
+
+#floating_background > {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+@keyframes floating{
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-60vh) rotate(360deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-120vh) rotate(720deg);
+		opacity: 0;
+	}
+}
+
+#floating_background .circle li{
+    opacity: 0;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 0;
+    display: block;
+    list-style: none;
+    animation: floating 8s linear infinite;
+}
+
+#floating_background .circle li:nth-child(1){
+    left: 20vw;
+    background: #c2c97c;
+    animation-delay: 1s;
+}
+
+#floating_background .circle li:nth-child(2){
+    width: 12vw;
+    height: 12vw;
+    left: 70vw;
+    background: #c2a958;
+    animation-delay: 3s;
+    animation-duration: 10s;
+}
+
+
+#floating_background .square li{
+     opacity: 0;
+     width: 2vw;
+     height: 2vw;
+     background: #e0deb6;
+     
+     position: absolute;
+     bottom: 0;
+     display: block;
+     list-style: none;
+     animation: floating 7s linear infinite;
+ }
+
+#floating_background .square li:nth-child(1){
+    width: 4vw;
+    height: 4vw;
+
+    left: 5vw;
+    animation-delay: 5s;
+    animation-duration: 7s;
+}
+
+#floating_background .square li:nth-child(2){
+    left: 15vw;
+    animation-delay: 10s;
+    animation-duration: 11s;
+}
+
+#floating_background .square li:nth-child(3){
+    width: 1vw;
+    height: 1vw;
+
+    left: 45vw;
+    animation-delay: 6s;
+    animation-duration: 13s;
+}
+
+#floating_background .square li:nth-child(4){
+    width: 3vw;
+    height: 3vw;
+    
+    left: 90vw;
+    animation-delay: 3s;
+    animation-duration: 9s;
+
+}
+
+#floating_background .triangle li{
+    width: 0;
+    height: 0;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border-bottom: 4vw solid #b9ce22;
+    opacity: 0;
+
+    position: absolute;
+    bottom: 0;
+    display: block;
+    list-style: none;
+    animation: floating 16s linear infinite;
+}
+
+#floating_background .triangle li:nth-child(1){
+    border-left: 4vw solid transparent;
+    border-right: 4vw solid transparent;
+    border-bottom: 8vw solid #9d9b48;
+
+    left: 45vw;
+    animation-delay: 10s;
+    animation-duration: 16s;
+}
+
+#floating_background .triangle li:nth-child(2){
+    left: 60vw;
+    animation-delay: 1s;
+    animation-duration: 14s;
+}
+
+#floating_background .triangle li:nth-child(3){
+    left: 76vw;
+    animation-delay: 5s;
+}
+
+#floating_background .triangle li:nth-child(4){
+    left: 86vw;
+    animation-delay: 2s;
+}
+
+#floating_background .moon li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 7px 7px 0 0 #5e4620;
+
+    position: absolute;
+    bottom: 0;
+    display: block;
+    list-style: none;
+    animation: floating 15s linear infinite;
+}
+
+#floating_background .moon li:nth-child(1){
+    left: 27vw;
+    animation-delay: 10s;
+    animation-duration: 18s;
+}
+
+#floating_background .moon li:nth-child(2){
+    left: 54vw;
+    animation-delay: 1s;
+    animation-duration: 13s;
+}
+
+#floating_background .moon li:nth-child(3){
+    left: 81vw;
+    animation-delay: 6s;
+}
+
+#floating_background .moon li:nth-child(4){
+    left: 64vw;
+    animation-delay: 1s;
+}
+
+#floating_background .heart li{
+    position: absolute;
+    width: 60px;
+    height: 50px;
+
+    bottom: 0;
+    display: block;
+    list-style: none;
+    animation: floating 14s linear infinite;
+}
+#floating_background .heart li:before, #floating_background .heart li:after {
+    position: absolute;
+    content: "";
+    left: 30px;
+    top: 0;
+    width: 30px;
+    height: 50px;
+    background: #5c5620;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#floating_background .heart li:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+#floating_background .heart li:nth-child(2){
+    left: 72vw;
+    animation-duration: 10s;
+}
+
+#floating_background .heart li:nth-child(3){
+    left: 45vw;
+    animation-delay: 5s;
+}
+
+#floating_background .heart li:nth-child(4){
+    left: 21vw;
+    animation-delay: 2s;
+}
+
+/* Floating Background End*/

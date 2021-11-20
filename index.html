@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Hello world!
-</body>
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
+
+    <title>Mengyan Wu</title>
+  </head>
+  <body >
+    <!-- floating animation reference:https://www.fdmdigital.co.uk/css-floating-background-shapes/ -->
+    <div id="floating_background">
+      <!-- <ul class="heart"><li></li><li></li> </ul> -->
+      <!-- <ul class="moon"><li></li><li></li> </ul> -->
+      <ul class="triangle"> <li></li> <li></li> </ul>
+      <ul class="square"> <li></li> <li></li> <li></li> <li></li></ul>
+      <ul class="circle"><li></li><li></li></ul>
+    </div>
+     <!-- navigation bar -->
+    <nav data-aos="fade-down" data-aos-duration="1500">
+      <ul class="nav_links" data-aos="fade-down" data-aos-duration="600">
+        <li class="nav_item current_link"><a href="index.html">Home</a></li>
+        <li class="nav_item"><a href="project.html">Project</a></li>
+        <li class="nav_item"><a href="travel.html">Travel</a></li>
+        <li class="nav_item"><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <main data-aos="fade-up" data-aos-duration="2000">
+      <h1>Hi, I'm <span style="color:#a2bd63">Mengyan Wu</span></h1>
+
+      <p data-aos="fade-up" data-aos-duration="2000">I'm currently a first year master student studying <span style="color: #89a055; font-weight: 800;">Data Science</span> at the University of Michigan School of Information.</p>
+    </main>
+
+    <footer>
+      <p>&copy; Designed & Coded by Mengyan Wu</p>
+    </footer>
+
+    <!-- cursor -->
+    <div id="cursor"></div>
+    
+    <script>
+      const cursor = document.querySelector('#cursor');
+      const editCursor = e => {
+          const { clientX: x, clientY: y } = e;
+          cursor.style.left = x + 'px';
+          cursor.style.top = y + 'px';
+      };
+      window.addEventListener('mousemove', editCursor);
+    </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  </body>
 </html>

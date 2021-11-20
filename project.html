@@ -6,36 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/project.css">
+  <!-- <link rel="stylesheet" href="css/project.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
-  <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
 
   <title>Project</title>
 </head>
 <body>
-  <header>
-    <nav>
+  
+    <nav data-aos="fade-down" data-aos-duration="1500">
       <ul class="nav_links">
-        <li class="nav_item"><a href="home.html">Home</a></li>
+        <li class="nav_item"><a href="index.html">Home</a></li>
         <li class="nav_item current_link"><a href="project.html">Project</a></li>
         <li class="nav_item"><a href="travel.html">Travel</a></li>
         <li class="nav_item"><a href="about.html">About</a></li>
       </ul>
     </nav>
-  </header>
+    
 
   <main>
     <div class="nice_projects">
       <div class="project_list">
-          <a class="project" id="shooting" href="">
+          <a data-aos="fade-up" data-aos-duration="2000" class="project" id="shooting" href="">
               <div class="img_container"><img src="images/shooting.png" alt="Shooting"></div>
               <div><p class="project_text">US school shooting analysis using SparkSQL</p></div>
           </a>
-          <a class="project" id="covid" href="">
+          <a data-aos="fade-up" data-aos-duration="2000" class="project" id="covid" href="">
               <div class="img_container"><img src="images/covid.png" alt="Covid"></div>
               <div><p class="project_text">Covid-19 analysis using R</p></div>
           </a>
-          <a class="project" id="django" href="" data-aos="fade-up" data-aos-duration="1100">
+          <a data-aos="fade-up" data-aos-duration="2000" class="project" id="django" href="" data-aos="fade-up" data-aos-duration="1100">
             <div class="img_container"><img src="images/django.png" alt="django"></div>
             <div><p class="project_text">Mini forum built by Django</p></div>
         </a>
@@ -46,6 +47,24 @@
   <footer>
     <p>&copy; Designed & Coded by Mengyan Wu</p>
   </footer>
+
+  <!-- cursor -->
+  <div id="cursor"></div>
+  
+  <script>
+    const cursor = document.querySelector('#cursor');
+    const editCursor = e => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+    };
+    window.addEventListener('mousemove', editCursor);
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
 

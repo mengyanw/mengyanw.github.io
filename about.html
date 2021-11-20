@@ -6,44 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+    <!-- <link rel="stylesheet" href="css/about.css"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
-    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     
     <title>About</title>
 </head>
 <body>
-  <header>
-      <nav>
-        <ul class="nav_links">
-          <li class="nav_item"><a href="home.html">Home</a></li>
-          <li class="nav_item"><a href="project.html">Project</a></li>
-          <li class="nav_item"><a href="travel.html">Travel</a></li>
-          <li class="nav_item current_link"><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+  <nav data-aos="fade-down" data-aos-duration="1500">
+    <ul class="nav_links">
+      <li class="nav_item"><a href="index.html">Home</a></li>
+      <li class="nav_item"><a href="project.html">Project</a></li>
+      <li class="nav_item"><a href="travel.html">Travel</a></li>
+      <li class="nav_item current_link"><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <header id="about_header">
+
   </header>
 
-  <main>
-    <div class="img_container">
-      <img id="image0" src="images/0.jpg" alt=""/>
-    </div>
-
-    <div class="intro_text"></div>
-        <p>Hello again!</p>
-        <p>I am Mengyan Wu, a first year master student major in Data Science at University of Michigan School of Information.</p>
-        <p>I am currently doing a 3+2 program founded by Shanghai Jiao Tong University in China and University of Michigan in the US.</p>
-        <p>I will be graduating in 2022 for bachelor degree in ECE and 2023 for master degree in MSI.</p>
-        <p>I love travelling. I have travelled to multiple countries and most of the provinces of China. </p>
-        <p>I am also a puzzle lover!</p>
+  <main data-aos="fade-up" data-aos-duration="2000">
+        <p>Hello again!</p><br>
+        <p>I am Mengyan Wu, a first year master student major in <span style="color:#a2bd63">Data Science</span> at University of Michigan School of Information.</p><br>
+        <p>I am currently doing a <span style="color:#a2bd63">3+2</span> program founded by Shanghai Jiao Tong University in China and University of Michigan in the US.</p><br>
+        <p>I will be graduating in 2022 for bachelor degree in ECE and 2023 for master degree in MSI.</p><br>
+        <p>I love <span style="color:#a2bd63">travelling</span>. I have travelled to multiple countries and most of the provinces of China. </p><br>
+        <p>I am also a <span style="color:#a2bd63">puzzle</span> lover!</p>
 
         <!-- <div class="resume"><a  href=""><div>Resume</div><div><i class="fas fa-chevron-right"></i></div></a></div> -->
 
-    </div>
+    </div><br><br><br><br><br>
+
+    <form data-aos="fade-up" data-aos-duration="2000" action="https://formspree.io/f/xwkadgbr" method="post">
+      <fieldset>
+        <legend>Contact Me</legend>
+    
+        <label for="name_id">Your Name</label>
+        <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required><br>
+    
+        <label for="email_id">Your Email</label>
+        <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required><br>
+    
+        <label for="msg_id">Leave A Message</label>
+        <textarea placeholder="Enter your message" id = "msg_id" name="msg" required></textarea><br><br>
+    
+        <input type="submit" value = "Submit">
+      </fieldset>
+     </form>
   </main>
 
   <footer>
     <p>&copy; Designed & Coded by Mengyan Wu</p>
   </footer>
+
+  <!-- cursor -->
+  <div id="cursor"></div>
+
+  <script>
+    const cursor = document.querySelector('#cursor');
+    const editCursor = e => {
+        const { clientX: x, clientY: y } = e;
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+    };
+    window.addEventListener('mousemove', editCursor);
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

@@ -6,39 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/travel.css">
+    <!-- <link rel="stylesheet" href="css/travel.css">  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
-    <link rel="shortcut icon" type="image/png" href="images/logo_icon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
     <title>Travel</title>
 </head>
 <body>
-    <header>
-        <nav>
-          <ul class="nav_links">
-            <li class="nav_item"><a href="home.html">Home</a></li>
-            <li class="nav_item"><a href="project.html">Project</a></li>
-            <li class="nav_item current_link"><a href="travel.html">Travel</a></li>
-            <li class="nav_item"><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-      </header>
+  <nav data-aos="fade-down" data-aos-duration="1500">
+    <ul class="nav_links">
+      <li class="nav_item"><a href="index.html">Home</a></li>
+      <li class="nav_item"><a href="project.html">Project</a></li>
+      <li class="nav_item current_link"><a href="travel.html">Travel</a></li>
+      <li class="nav_item"><a href="about.html">About</a></li>
+    </ul>
+  </nav>
     <main>
-      <h2 id = "gallery"></h2>
-          <div class="gallery"> 
-            <img id="image1" src="images/1.jpg" alt="" />
-            <img id="image6" src="images/4.JPG" alt="" />
-            <img id="image4" src="images/8.JPG" alt="" />
-            <img id="image7" src="images/2.JPG" alt="" />
-            <img id="image8" src="images/6.JPG" alt="" />
-            <img id="image9" src="images/9.JPG" alt="" /> 
-            <img id="image2" src="images/10.png" alt="" />
-            <img id="image3" src="images/3.JPG" alt="" />
-            <img id="image5" src="images/5.JPG" alt="" />
-          </div>
+        <div class="gallery"> 
+          <img data-aos="fade-up" data-aos-duration="1000" id="image1" src="images/1.jpg" alt="Dumbo" />
+          <img data-aos="fade-up" data-aos-duration="1000" id="image4" src="images/4.JPG" alt="Shangrila" />
+          <img data-aos="fade-up" data-aos-duration="1000" id="image8" src="images/8.JPG" alt="Ice wall" />
+          <img data-aos="fade-up" data-aos-duration="1000" id="image2" src="images/2.JPG" alt="Lijiang" />
+          <img data-aos="fade-up" data-aos-duration="1000" id="image6" src="images/6.png" alt="xinjiang" />
+          <img data-aos="fade-up" data-aos-duration="1000" id="image9" src="images/9.JPG" alt="Quebec" /> 
+          <img data-aos="fade-up" data-aos-duration="1000" id="image10" src="images/10.png" alt="Niagara" />
+          <img data-aos="fade-up" data-aos-duration="1000" id="image3" src="images/3.JPG" alt="Dali" />
+          <img data-aos="fade-up" data-aos-duration="1000" id="image5" src="images/5.JPG" alt="Tibet" />
+        </div>
     </main>    
     <footer>
         <p>&copy; Designed & Coded by Mengyan Wu</p>
     </footer>
+
+    <!-- cursor -->
+    <div id="cursor"></div>
+
+    <script>
+      const cursor = document.querySelector('#cursor');
+      const editCursor = e => {
+          const { clientX: x, clientY: y } = e;
+          cursor.style.left = x + 'px';
+          cursor.style.top = y + 'px';
+      };
+      window.addEventListener('mousemove', editCursor);
+    </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   </body>
 </html>
 
