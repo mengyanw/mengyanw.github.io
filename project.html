@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/project.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
@@ -30,16 +29,43 @@
       <div class="project_list">
           <a data-aos="fade-up" data-aos-duration="2000" class="project" id="shooting" href="">
               <div class="proj_img_container"><img src="images/shooting.png" alt="Shooting"></div>
-              <div><p class="project_text">US school shooting analysis using SparkSQL</p></div>
+              <div><p class="project_text">US school shooting analysis</p></div>
           </a>
+          <p data-aos="fade-up" data-aos-duration="2000" id="shooting_text">
+          Cleaned, reorganized and joined 4 raw datasets with numpy and pandas.<br>
+          Conducted time series analysis to find out the peak time of shooting and visualize with ggplot in R.<br>
+          Evaluated the influence of regional unemployment and education rates on shooting and created visualizations in python such as pairplots, barplots and a national geographic heat-map.<br>
+          </p>
           <a data-aos="fade-up" data-aos-duration="2000" class="project" id="covid" href="">
               <div class="proj_img_container"><img src="images/covid.png" alt="Covid"></div>
               <div><p class="project_text">Covid-19 analysis using R</p></div>
           </a>
+          <p data-aos="fade-up" data-aos-duration="2000" id="covid_text">
+            Evaluated the relationship between the strictness of government policy and the extent of closeness in
+            Sweden and India using stratified & parametric bootstrap method in R.<br>
+            Conducted linear regression and hypothesis test to evaluate the relationship between the case growth rate
+            and the strictness of government policy.<br>
+          </p>
           <a data-aos="fade-up" data-aos-duration="2000" class="project" id="django" href="" data-aos="fade-up" data-aos-duration="1100">
             <div class="proj_img_container"><img src="images/django.png" alt="django"></div>
             <div><p class="project_text">Mini forum built by Django</p></div>
-        </a>
+          </a>
+          <p data-aos="fade-up" data-aos-duration="2000" id="django_text">
+            Built a website about the 19th century paintings in the Metropolitan Museum with Django. The database
+            has 6 data models with 3 many-to-one relationships and 2 many-to-many relationships.<br>
+
+            Built log-in features with social login with GitHub. Built comment feature and add-to-favorite feature.<br>
+            Designed the UI with bootstrap.<br>
+          </p>
+          <a data-aos="fade-up" data-aos-duration="2000" class="project" id="imdb" href="" data-aos="fade-up" data-aos-duration="1100">
+            <div class="proj_img_container"><img src="images/django.png" alt="imdb"></div>
+            <div><p class="project_text">IMDb Top 1000 Movies Analysis </p></div>
+          </a>
+          <p data-aos="fade-up" data-aos-duration="2000" id="imdb_text">
+            Decomposed the original excel file of IMDb top 1000 movies into 3 normalized csv datasets with pandas.<br>
+            Created a MySQL database via DataGrip to manage the normalized data.<br>
+            Ran 10+ SQL queries to derive meaningful sub-data of patterns of high-rating movies.<br>
+          </p>
       </div>
     </div>
   </main>
