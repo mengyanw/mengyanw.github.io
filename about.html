@@ -13,7 +13,7 @@
     <title>About</title>
 </head>
 <body>
-  <a class = "skip" href="#main">Skip to Main Content</a>
+  <div class="skip"><a href="#main">Skip to Main Content</a></div>
   <nav data-aos="fade-down" data-aos-duration="1500">
     <ul class="nav_links">
       <li class="nav_item"><a href="index.html">Home</a></li>
@@ -28,13 +28,12 @@
   </header>
 
   <main id="main" data-aos="fade-up" data-aos-duration="2000">
-    <p>Hello again!<br>
-    I am Mengyan Wu, a first year master student studying <span style="color:#ddff8c">Data Science</span> at the University of Michigan School of Information.<br>
-
-    I love <span style="color:#ddff8c">travelling</span>. I have travelled to multiple countries and most of the provinces of China. I take every chance I get to visit beautiful sights, enjoy local foods and immerse myself in different cultures. <br>
-    
-    I am also a <span style="color:#ddff8c">puzzle</span> lover! I generally play 500-piece ~ 1500-piece puzzles, and I have a nice collection of finished puzzles.
-    </p>
+    <p>Hello again!</p><br>
+    <p>I am Mengyan Wu, a first year master student studying <span style="color:#ddff8c">Data Science</span> at the University of Michigan School of Information.</p><br>
+    <p data-aos="fade-up" data-aos-duration="2000">I am doing a <span style="color:#ddff8c">3+2</span> program found by Shanghai Jiao Tong University in China and University of Michigan in the US.<br>
+    I will be graduating in 2022 for bachelor degree in Electrical & Computer Engineering at SJTU and 2023 for master degree in Information Science (track: Data Science) at UMich.</p><br>
+    <p data-aos="fade-up" data-aos-duration="2000">I love <span style="color:#ddff8c">travelling</span>. I have travelled to multiple countries and most of the provinces of China. I take every chance I get to visit beautiful sights, enjoy local foods and immerse myself in different cultures.</p><br>
+    <p data-aos="fade-up" data-aos-duration="2000">I am also a <span style="color:#ddff8c">puzzle</span> lover! I generally play 500-piece ~ 1500-piece puzzles, and I have a nice collection of finished puzzles.</p><br>
 
         <!-- <div class="resume"><a  href=""><div>Resume</div><div><i class="fas fa-chevron-right"></i></div></a></div> -->
 
@@ -77,7 +76,13 @@
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+        disable: function () {
+            const query = '(prefers-reduced-motion: reduce)';
+            const hasOSReducedMotion = window.matchMedia(query).matches;
+            if(hasOSReducedMotion) return true;
+        }
+    });
   </script>
 </body>
 </html>

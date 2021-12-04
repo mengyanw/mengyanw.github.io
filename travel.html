@@ -12,7 +12,7 @@
     <title>Travel</title>
 </head>
 <body>
-  <a class = "skip" href="#main">Skip to Main Content</a>
+  <div class="skip"><a href="#main">Skip to Main Content</a></div>
   <nav data-aos="fade-down" data-aos-duration="1500">
     <ul class="nav_links">
       <li class="nav_item"><a href="index.html">Home</a></li>
@@ -53,7 +53,13 @@
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+        disable: function () {
+            const query = '(prefers-reduced-motion: reduce)';
+            const hasOSReducedMotion = window.matchMedia(query).matches;
+            if(hasOSReducedMotion) return true;
+        }
+    });
   </script>
 
   </body>

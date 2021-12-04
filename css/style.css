@@ -10,10 +10,10 @@ body{
   background-color: black;
 }
 
-.skip{
+.skip a{
   background: #000000;
   left: 0;
-  padding: 6px;
+  padding: 7px;
   position: absolute;
   top: -40px;
   -webkit-transition: top 1s ease-out;
@@ -21,7 +21,7 @@ body{
   z-index: 1;
 }
 
-.skip:focus{
+.skip a:focus{
   top:20px;
   color: var(--main-bg-color);
   text-decoration-style: solid;
@@ -46,11 +46,12 @@ nav{
 
 .nav_links{
   display: flex;
-  flex-direction: row;
+  flex-flow: column wrap;
   justify-content: flex-end;
 }
 
 .nav_item{
+  font-size: 2.5vw;
   width: 6em;
   text-align: center;
 }
@@ -98,81 +99,360 @@ main h1 {
 main p {
   font-size: 3vw;
 }
+
+main h2{
+  font-size: 5vw;
+  margin-top: 50vh;
+  margin-bottom: 5vh;
+}
+
+.experience_list{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-row-gap:15px;
+}
+
+#mechmind{
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 1;
+}
+#mechmind_text{
+  grid-column: 1 / span 6;
+  grid-row: 2 / span 1;
+}
+#strategy{
+  grid-column: 1 / span 6;
+  grid-row: 3 / span 1;
+}
+#strategy_text{
+  grid-column: 1 / span 6;
+  grid-row: 4 / span 1;
+}
+#umji{
+  grid-column: 1 / span 6;
+  grid-row: 5 / span 1;
+}
+#umji_text{
+  grid-column: 1 / span 6;
+  grid-row: 6 / span 1;
+}
+.experience{
+  display: block;
+  margin: auto;
+  background-color: transparent;
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+}
+.experience_text{
+  align-self: center;
+}
+
+.experience_text p{
+  font-size: 2.5vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.experience_text p:first-child{
+  font-size: 2.75vw;
+  font-style: italic;
+}
+
+@media  screen and (min-width: 360px) {
+  #mechmind{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+  }
+  #mechmind_text{
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 2;
+  }
+  #strategy{
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
+  }
+  #strategy_text{
+    grid-column: 4 / span 3;
+    grid-row: 3 / span 2;
+  }
+  #umji{
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 2;
+  }
+  #umji_text{
+    grid-column: 4 / span 3;
+    grid-row: 5 / span 2;
+  }
+  .experience_text p{
+    font-size: 2vw;
+  }
+  .experience_text p:first-child{
+    font-size: 2.25vw;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  #mechmind{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+  }
+  #mechmind_text{
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 3;
+  }
+  #strategy{
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 3;
+  }
+  #strategy_text{
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 3;
+  }
+  #umji{
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 3;
+  }
+  #umji_text{
+    grid-column: 5 / span 2;
+    grid-row: 4 / span 3;
+  }
+  .experience_text{
+    align-self:flex-start;
+  }
+  .experience_text p{
+    font-size: 1.5vw;
+  }
+  .experience_text p:first-child{
+    font-size: 1.75vw;
+  }
+}
 /* Index End */
 
 /* Project */
 .project_list{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(8, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-row-gap:15px;
 }
 
 #shooting{
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 1;
 }
 
 #shooting_text{
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 1;
 }
 
 #covid{
-  grid-column: 1 / span 1;
-  grid-row: 3 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 3 / span 1;
 }
 
 #covid_text{
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 1;
 }
 
 #django{
-  grid-column: 1 / span 1;
-  grid-row: 5 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 5 / span 1;
 }
 
 #django_text{
-  grid-column: 2 / span 1;
-  grid-row: 5 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 6 / span 1;
 }
 
 #imdb{
-  grid-column: 1 / span 1;
-  grid-row: 7 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 7 / span 1;
 }
 
 #imdb_text{
-  grid-column: 2 / span 1;
-  grid-row: 7 / span 2;
+  grid-column: 1 / span 4;
+  grid-row: 8 / span 1;
 }
-
 
 .project{
-  border-radius: 3vw;
-  margin: 5vh 5vw;
-  text-decoration: none !important;
+  display: block;
+  margin: auto;
+  background-color: transparent;
+  width: 100%;
+  height: 150px;
+  perspective: 1000px; 
+  overflow: hidden;
 }
-
-.project:hover{
-  background-color:#576d3075 ; 
-  border-radius: 3vw;
-}
-
-.project_list > p {
-  font-size: 1.5vw;
+.project_text{
   align-self: center;
 }
 
-.proj_img_container{
-  padding: 3vw;
+.project_text p{
+  font-size: 2.5vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.project_text p:first-child{
+  font-size: 3vw;
+  font-style: italic;
 }
 
-.project_text{
-  font-size: 2vw;
-  color: var(--main-bg-color);
+/* Flip Card */
+/* Reference: https://www.w3schools.com/howto/howto_css_flip_card.asp */
+.proj_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project:hover .proj_inner {
+  transform: rotateY(180deg);
+}
+
+.proj_front, .proj_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+
+}
+.proj_front img, .proj_back img{
+  display:block;
+  margin:auto;
+}
+
+.proj_front {
+  padding: 3vw;
+  color: black;
+}
+
+.proj_back {
+  padding: 3vw;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* Flip Card End */
+
+@media  screen and (min-width: 360px) {
+  /* Project */
+  #shooting{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  #shooting_text{
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  #covid{
+    grid-column:1 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  #covid_text{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  #django{
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2;
+  }
+
+  #django_text{
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 2;
+  }
+
+  #imdb{
+    grid-column: 1 / span 2;
+    grid-row: 7 / span 2;
+  }
+
+  #imdb_text{
+    grid-column: 3 / span 2;
+    grid-row: 7 / span 2;
+  }
+  
+  .project{
+    height: 200px;
+  }
+  .project_text p{
+    font-size: 1.5vw;
+  }
+  .project_text p:first-child{
+    font-size: 2vw;
+  }
+}
+
+@media  screen and (min-width: 780px) {
+  /* Project */
+  #shooting{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  #shooting_text{
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 5;
+  }
+
+  #covid{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  #covid_text{
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 5;
+  }
+
+  #django{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  #django_text{
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 5;
+  }
+
+  #imdb{
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  #imdb_text{
+    grid-column: 4 / span 1;
+    grid-row: 4 / span 5;
+  }
+  
+  .project{
+    height: 325px;
+  }
+  .project_text{
+    align-self:flex-start;
+  }
+  .project_text p{
+    font-size: 1.25vw;
+  }
+  .project_text p:first-child{
+    font-size: 1.5vw;
+  }
 }
 
 /* Project End */
@@ -220,7 +500,8 @@ form legend{
 }
 
 label{
-  width: auto;
+  display: inline-block;
+  width: 100%;
 }
 
 input, textarea {
@@ -230,87 +511,49 @@ input, textarea {
 /* About End */
 
 /* Responsive */
-@media  screen and (max-width: 600px) {
-  /* Nav Bar */
+@media  screen and (min-width: 360px) {
+  /*Turn off parallax*/
+  #about_header{
+    background-attachment: initial;
+  }
+
+  label{
+    width:auto;
+  }
+}
+@media  screen and (min-width: 780px) {
   nav {
     display: flex;
     justify-content: end;
   }
   .nav_links{
-    flex-flow: column wrap;
-  }
-
-
-  /* Form */
-  label {
-    display: inline-block;
-    width: 100%;
-  }
-
-  /* Project */
-  #shooting{
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 1;
-  }
-  
-  #shooting_text{
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
-  }
-  
-  #covid{
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
-  }
-  
-  #covid_text{
-    grid-column: 1 / span 2;
-    grid-row: 4 / span 1;
-  }
-  
-  #django{
-    grid-column: 1 / span 2;
-    grid-row: 5 / span 1;
-  }
-  
-  #django_text{
-    grid-column: 1 / span 2;
-    grid-row: 6 / span 1;
-  }
-  
-  #imdb{
-    grid-column: 1 / span 2;
-    grid-row: 7 / span 1;
-  }
-  
-  #imdb_text{
-    grid-column: 1 / span 2;
-    grid-row: 8 / span 1;
-  }
-
-  .project_list > p {
-    font-size: 2.5vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-
-  .proj_img_container{
-    padding: 3vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-  
-  .project_text{
-    font-size: 4vw;
+    flex-flow: row;
   }
 }
 /* Responsive End */
 
+@media screen and (prefers-reduced-motion: reduce){
+  /*Turn off scroll*/
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
 
+  /*Turn off transition*/
+  .skip a{
+    -webkit-transition: initial; /* sets to default setting */
+    transition: initial; /* sets to default setting */
+  }
+
+  /*Turn off parallax*/
+  #about_header{
+    background-attachment: initial;
+  }
+
+  /*Turn off floating background*/
+  #floating_background{
+    display: none;
+  }
+}
 
 
 

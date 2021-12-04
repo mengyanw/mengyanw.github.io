@@ -12,7 +12,7 @@
     <title>Mengyan Wu</title>
   </head>
   <body >
-    <a class = "skip" href="#main">Skip to Main Content</a>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <!-- floating animation reference:https://www.fdmdigital.co.uk/css-floating-background-shapes/ -->
     <div id="floating_background">
       <!-- <ul class="heart"><li></li><li></li> </ul> -->
@@ -35,8 +35,50 @@
       <h1>Hi, I'm <span style="color:#a2bd63">Mengyan Wu</span></h1>
 
       <p data-aos="fade-up" data-aos-duration="2000">I'm currently a first year master student studying <span style="color: #ddff8c; font-weight: 800;">Data Science</span> at the University of Michigan School of Information.</p><br>
-      <p data-aos="fade-up" data-aos-duration="2000">I am doing a <span style="color:#ddff8c">3+2</span> program found by Shanghai Jiao Tong University in China and University of Michigan in the US.</p><br>
-      <p data-aos="fade-up" data-aos-duration="2000">I will be graduating in 2022 for bachelor degree in Electrical & Computer Engineering at SJTU and 2023 for master degree in Information Science (track: Data Science) at UMich.</p><br>
+
+      <h2 data-aos="fade-up" data-aos-duration="2000">Experiences</h2>
+      <div class="experience_list">
+        <a data-aos="fade-up" data-aos-duration="2000" class="experience" id="mechmind" href="">
+          <div class="experience_inner">
+            <img src="images/mechmind.png" alt="MechMind">
+          </div>
+        </a>
+        <div data-aos="fade-up" data-aos-duration="2000" class="experience_text" id="mechmind_text">
+          <p>Mech-Mind Robotics, Beijing, China<br>Software Developer, Intern, Jan 2021 - Mar 2021</p>
+          <p>
+            • Created a data dashboard with PyQt to visualize the live information of the parcel picking pipeline.<br>
+            • Written test scripts that can quickly compare the output differences among versions of the software.<br>
+            • Trained the image recognition models and written supportive documentations.<br>
+          </p>
+        </div>
+        
+        <a data-aos="fade-up" data-aos-duration="2000" class="experience" id="strategy" href="">
+          <div class="experience_inner">
+            <img src="images/strategy.png" alt="strategy&">
+          </div>
+        </a>
+        <div data-aos="fade-up" data-aos-duration="2000" class="experience_text" id="strategy_text">
+          <p>PwC Strategy&, Shanghai, China<br>Strategy Consulting, Part Time Assistant, Mar 2020 - Nov 2020</p>
+          <p>
+            • Led team of 4 to conduct competitive analysis for tech companies including B&O, Baidu and HONDA.<br>
+            • Used Python and Excel to analyze datasets and provided practical solutions to clients.<br>
+          </p>
+        </div>
+
+        <a data-aos="fade-up" data-aos-duration="2000" class="experience" id="umji" href="">
+          <div class="experience_inner">
+            <img src="images/umji.png" alt="umji">
+          </div>
+        </a>
+        <div data-aos="fade-up" data-aos-duration="2000" class="experience_text" id="umji_text">
+          <p>Shanghai Jiao Tong University, Shanghai, China<br>Teaching Assistant, Feb - Apr & Sept - Nov 2020</p>
+          <p>
+            • Held office hour every week. Helped over 50 students with the course material, papers and reports.<br>
+            • Supervised students’ performance in class and in the laboratory.<br>
+            • Reviewed lab reports (over 200 reports with 10 pages on average in one semester).<br>
+          </p>
+        </div>
+      </div>
 
     </main>
 
@@ -59,7 +101,13 @@
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+        disable: function () {
+            const query = '(prefers-reduced-motion: reduce)';
+            const hasOSReducedMotion = window.matchMedia(query).matches;
+            if(hasOSReducedMotion) return true;
+        }
+    });
   </script>
   </body>
 </html>
