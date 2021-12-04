@@ -315,7 +315,7 @@ main h2{
   transform-style: preserve-3d;
 }
 
-.project:hover .proj_inner {
+.project:hover .proj_inner,  .project:focus .proj_inner{
   transform: rotateY(180deg);
 }
 
@@ -476,7 +476,7 @@ main h2{
 
 /* About */
 #about_header{
-  background-attachment: fixed; /* Parallax effect */
+  background-attachment: initial; /* Parallax effect */
   background-position: 75% 25%; /* Parallax effect */
   background-size: cover; /* Parallax effect */
   color: white;
@@ -512,9 +512,8 @@ input, textarea {
 
 /* Responsive */
 @media  screen and (min-width: 480px) {
-  /*Turn off parallax*/
   #about_header{
-    background-attachment: initial;
+    background-attachment: fixed;
   }
 
   label{
