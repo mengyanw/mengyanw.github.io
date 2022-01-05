@@ -628,10 +628,10 @@ input, textarea {
 }
 
 #floating_background .circle li:nth-child(2){
-    width: 4vw;
-    height: 4vw;
-    left: 5vw;
-    background: #fddd7286;
+    width: 9vw;
+    height: 9vw;
+    left: 70vw;
+    background: #c2a958;
     animation-delay: 3s;
     animation-duration: 10s;
 }
@@ -689,7 +689,7 @@ input, textarea {
     height: 0;
     border-left: 2vw solid transparent;
     border-right: 2vw solid transparent;
-    border-bottom: 4vw solid #b9ce22;
+    border-bottom: 4vw solid #7b7530;
     opacity: 0;
 
     position: absolute;
@@ -702,7 +702,7 @@ input, textarea {
 #floating_background .triangle li:nth-child(1){
     border-left: 4vw solid transparent;
     border-right: 4vw solid transparent;
-    border-bottom: 8vw solid #9d9b48;
+    border-bottom: 8vw solid #443817;
 
     left: 45vw;
     animation-delay: 10s;
