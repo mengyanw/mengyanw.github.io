@@ -42,9 +42,8 @@ nav{
   align-items: flex-end;
 }
 .nav_item{
-  font-size: 2.5vw;
-  column-gap: 10px;
-  margin: 5px;
+  font-size: 3.5vw;
+  margin: 8px;
 }
 /* .nav_item > a {
   background-color: black;
@@ -60,6 +59,8 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 #footer_container{
   display:flex;
@@ -133,13 +134,13 @@ main h2{
 align-self: center;
 }
 .proj_text p{
-  font-size: 16px;
+  font-size: 14px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .proj_text p:first-child{
-  font-size: 24px;
+  font-size: 18px;
   font-style: italic;
 } 
 #django {
@@ -201,13 +202,19 @@ input, textarea {
 
 /* Responsive */
 @media  screen and (min-width: 480px) {
+  .proj_text p{
+    font-size: 16px;
+  }
+  .proj_text p:first-child{
+    font-size: 24px;
+  } 
   #about_header{
     background-attachment: fixed;
   }
   .nav_item {
     width: 6em;
     text-align: center;
-    /* font-size: 20px; */
+    font-size: 2.5vw;
   }
   label{
     width:auto;
