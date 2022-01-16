@@ -60,11 +60,12 @@ footer {
   bottom: 0;
   width: 100%;
   padding-top: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 #footer_container{
   display:flex;
   justify-content: space-between;
+  align-items: center;
   margin-left: 5vh;
   margin-right: 5vh;
 }
