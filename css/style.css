@@ -6,7 +6,6 @@ body{
   font-family: "Roboto Mono", serif;
   color: var(--main-bg-color);
   font-size: 2.5vh;
-  /* background-color: #effdf3; */
   background-color: black;
 }
 
@@ -51,14 +50,14 @@ nav{
 }
 
 .nav_item{
-  /* font-size: 3.5vw; */
+  font-size: 3.5vw;
   width: 6em;
   text-align: center;
 }
 
-.nav_item > a {
+/* .nav_item > a {
   background-color: black;
-}
+} */
 
 .current_link a{
   color: #b8b8b8;
@@ -66,16 +65,15 @@ nav{
 }
 
 footer {
-  background-color: #414642;
+  background-color: #414642b2;
   color: var(--main-bg-color);
   font-size: 2.5vw;
-  /* position: fixed; */
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
 
 main{
-  margin: 5vh;
   margin-bottom: 100px;
 }
 
@@ -96,12 +94,14 @@ html, a{
 /* General End */
 
 /* Index */
+
 main h1 {
   font-size: 10vw;
-  margin-top: 30vh;
+  margin: 30vh 5vh 5vh 5vh;
 }
-main p {
+#intro {
   font-size: 3vw;
+  margin: 5vh;
 }
 
 main h2{
@@ -110,372 +110,7 @@ main h2{
   margin-bottom: 5vh;
 }
 
-.experience_list{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-row-gap:15px;
-}
-
-#mechmind{
-  grid-column: 1 / span 6;
-  grid-row: 1 / span 1;
-}
-#mechmind_text{
-  grid-column: 1 / span 6;
-  grid-row: 2 / span 1;
-}
-#strategy{
-  grid-column: 1 / span 6;
-  grid-row: 3 / span 1;
-}
-#strategy_text{
-  grid-column: 1 / span 6;
-  grid-row: 4 / span 1;
-}
-#umji{
-  grid-column: 1 / span 6;
-  grid-row: 5 / span 1;
-}
-#umji_text{
-  grid-column: 1 / span 6;
-  grid-row: 6 / span 1;
-}
-.experience{
-  display: block;
-  margin: auto;
-  background-color: transparent;
-  width: 80%;
-  height: auto;
-  overflow: hidden;
-}
-.experience_text{
-  align-self: center;
-}
-
-.experience_text p{
-  font-size: 2.5vw;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-.experience_text p:first-child{
-  font-size: 2.75vw;
-  font-style: italic;
-}
-
-@media  screen and (min-width: 480px) {
-  #mechmind{
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 2;
-  }
-  #mechmind_text{
-    grid-column: 4 / span 3;
-    grid-row: 1 / span 2;
-  }
-  #strategy{
-    grid-column: 1 / span 3;
-    grid-row: 3 / span 2;
-  }
-  #strategy_text{
-    grid-column: 4 / span 3;
-    grid-row: 3 / span 2;
-  }
-  #umji{
-    grid-column: 1 / span 3;
-    grid-row: 5 / span 2;
-  }
-  #umji_text{
-    grid-column: 4 / span 3;
-    grid-row: 5 / span 2;
-  }
-  .experience_text p{
-    font-size: 2vw;
-  }
-  .experience_text p:first-child{
-    font-size: 2.25vw;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #mechmind{
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 3;
-  }
-  #mechmind_text{
-    grid-column: 1 / span 2;
-    grid-row: 4 / span 3;
-  }
-  #strategy{
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 3;
-  }
-  #strategy_text{
-    grid-column: 3 / span 2;
-    grid-row: 4 / span 3;
-  }
-  #umji{
-    grid-column: 5 / span 2;
-    grid-row: 1 / span 3;
-  }
-  #umji_text{
-    grid-column: 5 / span 2;
-    grid-row: 4 / span 3;
-  }
-  .experience_text{
-    align-self:flex-start;
-  }
-  .experience_text p{
-    font-size: 1.5vw;
-  }
-  .experience_text p:first-child{
-    font-size: 1.75vw;
-  }
-}
 /* Index End */
-
-/* Project */
-.project_list{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-row-gap:15px;
-}
-
-#shooting{
-  grid-column: 1 / span 4;
-  grid-row: 1 / span 1;
-}
-
-#shooting_text{
-  grid-column: 1 / span 4;
-  grid-row: 2 / span 1;
-}
-
-#covid{
-  grid-column: 1 / span 4;
-  grid-row: 3 / span 1;
-}
-
-#covid_text{
-  grid-column: 1 / span 4;
-  grid-row: 4 / span 1;
-}
-
-#django{
-  grid-column: 1 / span 4;
-  grid-row: 5 / span 1;
-}
-
-#django_text{
-  grid-column: 1 / span 4;
-  grid-row: 6 / span 1;
-}
-
-#imdb{
-  grid-column: 1 / span 4;
-  grid-row: 7 / span 1;
-}
-
-#imdb_text{
-  grid-column: 1 / span 4;
-  grid-row: 8 / span 1;
-}
-
-.project{
-  display: block;
-  margin: auto;
-  background-color: transparent;
-  width: 100%;
-  height: 150px;
-  perspective: 1000px; 
-  overflow: hidden;
-}
-.project_text{
-  align-self: center;
-}
-
-.project_text p{
-  font-size: 2.5vw;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-.project_text p:first-child{
-  font-size: 3vw;
-  font-style: italic;
-}
-
-/* Flip Card */
-/* Reference: https://www.w3schools.com/howto/howto_css_flip_card.asp */
-.proj_inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.project:hover .proj_inner,  .project:focus .proj_inner{
-  transform: rotateY(180deg);
-}
-
-.proj_front, .proj_back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-
-}
-.proj_front img, .proj_back img{
-  display:block;
-  margin:auto;
-}
-
-.proj_front {
-  padding: 3vw;
-  color: black;
-}
-
-.proj_back {
-  padding: 3vw;
-  color: white;
-  transform: rotateY(180deg);
-}
-/* Flip Card End */
-
-@media  screen and (min-width: 480px) {
-  /* Project */
-  #shooting{
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-  }
-
-  #shooting_text{
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 2;
-  }
-
-  #covid{
-    grid-column:1 / span 2;
-    grid-row: 3 / span 2;
-  }
-
-  #covid_text{
-    grid-column: 3 / span 2;
-    grid-row: 3 / span 2;
-  }
-
-  #django{
-    grid-column: 1 / span 2;
-    grid-row: 5 / span 2;
-  }
-
-  #django_text{
-    grid-column: 3 / span 2;
-    grid-row: 5 / span 2;
-  }
-
-  #imdb{
-    grid-column: 1 / span 2;
-    grid-row: 7 / span 2;
-  }
-
-  #imdb_text{
-    grid-column: 3 / span 2;
-    grid-row: 7 / span 2;
-  }
-  
-  .project{
-    height: 200px;
-  }
-  .project_text p{
-    font-size: 1.5vw;
-  }
-  .project_text p:first-child{
-    font-size: 2vw;
-  }
-}
-
-@media  screen and (min-width: 1024px) {
-  /* Project */
-  #shooting{
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 3;
-  }
-
-  #shooting_text{
-    grid-column: 1 / span 1;
-    grid-row: 4 / span 5;
-  }
-
-  #covid{
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 3;
-  }
-
-  #covid_text{
-    grid-column: 2 / span 1;
-    grid-row: 4 / span 5;
-  }
-
-  #django{
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 3;
-  }
-
-  #django_text{
-    grid-column: 3 / span 1;
-    grid-row: 4 / span 5;
-  }
-
-  #imdb{
-    grid-column: 4 / span 1;
-    grid-row: 1 / span 3;
-  }
-
-  #imdb_text{
-    grid-column: 4 / span 1;
-    grid-row: 4 / span 5;
-  }
-  
-  .project{
-    height: 325px;
-  }
-  .project_text{
-    align-self:flex-start;
-  }
-  .project_text p{
-    font-size: 1.25vw;
-  }
-  .project_text p:first-child{
-    font-size: 1.5vw;
-  }
-}
-
-/* Project End */
-
-/* Travel */
-.gallery {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-
-}
-.gallery img{
-  border-radius: 1vw;
-  border: 1vw solid #7b753075;
-  width: 320px;
-  margin: 12px;
-} 
-/* Travel End */
 
 
 /* About */
@@ -488,6 +123,12 @@ main h2{
   background-image: url("../images/about_header.JPG");
   background-repeat: no-repeat;
 }
+
+/* #resume{
+  color:rgb(58, 65, 47);
+  text-decoration: underline;
+  background-color: #839278b6;
+} */
 
 form{
   display: block;

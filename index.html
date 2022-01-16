@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
@@ -24,20 +25,90 @@
      <!-- navigation bar -->
     <nav data-aos="fade-down" data-aos-duration="1500">
       <ul class="nav_links" data-aos="fade-down" data-aos-duration="600">
-        <li class="nav_item current_link"><a href="index.html">Home</a></li>
-        <li class="nav_item"><a href="project.html">Project</a></li>
-        <!-- <li class="nav_item"><a href="travel.html">Travel</a></li> -->
+        <li class="nav_item current_link"><a href="index.html">Work</a></li>
         <li class="nav_item"><a href="about.html">About</a></li>
-        <li class="nav_item"><a href="images/Resume_Mengyan Wu.pdf">Resume</a></li>
+        <li class="nav_item"><a href="http://blog.wumengyan.com/">Blog</a></li>
+        <li class="nav_item"><a href="files/Resume_Mengyan Wu.pdf">Resume</a></li>
       </ul>
     </nav>
 
     <main  id="main" data-aos="fade-up" data-aos-duration="2000">
-      <h1 >Hi, I'm <span style="color:#ddff8c;">Mengyan Wu</span></h1>
+      <h1>Hi, I'm <span style="color:#a2bd63;">Mengyan Wu</span></h1>
 
-      <p data-aos="fade-up" data-aos-duration="2000">I'm currently a first year master student studying <span style="color: #ddff8c; font-weight: 800; ">Data Science</span> at the University of Michigan School of Information.</p><br>
+      <p id="intro" data-aos="fade-up" data-aos-duration="2000">I'm currently a first year master student studying <span style="color: #ddff8c; font-weight: 800; ">Data Science</span> at the University of Michigan School of Information.</p><br>
 
-      <h2 data-aos="fade-up" data-aos-duration="2000">Experiences</h2>
+      <h2 data-aos="fade-up" data-aos-duration="2000"></h2>
+      <div class="project_list">
+
+        <a data-aos="fade-up" data-aos-duration="2000" class="project" id="shooting" href="files/us_school_shooting_analysis.pdf">
+          <div class="proj_img">
+            <img src="images/shooting_front.png" alt="Front image of the shooting project">
+          </div>
+          <div class="proj_text">
+            <p>US school shooting analysis</p>
+            <p>2021 FALL</p><br>
+            <p>Cleaned, reorganized and joined 4 raw datasets with numpy and pandas.<br>
+              Conducted time series analysis to find out the peak time of shooting and visualize with ggplot in R.<br>
+              Evaluated the influence of regional unemployment and education rates on shooting and created visualizations in python such as pairplots, barplots and a national geographic heat-map.<br>
+            </p>
+          </div>
+        </a>
+
+        <a data-aos="fade-up" data-aos-duration="2000" class="project" id="imdb" href="files/imdb_analysis.pdf" data-aos="fade-up" data-aos-duration="1100">
+          <div class="proj_img">
+            <img src="images/imdb_front.png" alt="Front image of the imdb project">
+          </div>
+          
+          <div class="proj_text">
+            <p>IMDb Top 1000 Movies Analysis</p>
+            <p>2021 FALL</p><br>
+            <p>Decomposed the original excel file of IMDb top 1000 movies into 3 normalized csv datasets with pandas.<br>
+              Created a MySQL database via DataGrip to manage the normalized data.<br>
+              Ran 10+ SQL queries to derive meaningful sub-data of patterns of high-rating movies.<br></p>
+          </div>
+        </a>        
+
+        <a data-aos="fade-up" data-aos-duration="2000" class="project" id="covid" href="files/covid_analysis.html">
+          <div class="proj_img">
+            <img src="images/covid_front.png" alt="Front image of the covid project">
+          </div>
+        
+          <div class="proj_text">
+            <p>Covid-19 analysis using R</p>
+            <p>2021 SUMMER</p><br>
+            <p>Evaluated the relationship between the strictness of government policy and the extent of closeness in Sweden and India using stratified & parametric bootstrap method in R.<br>
+            Conducted linear regression and hypothesis test to evaluate the relationship between the case growth rate
+            and the strictness of government policy.<br>
+            </p>
+          </div>
+        </a>
+  
+        <a data-aos="fade-up" data-aos-duration="2000" class="project" id="django" href="http://artwiki.wumengyan.com/" data-aos="fade-up" data-aos-duration="1100">
+          <div class="proj_img">
+            <img src="images/django.png" alt="image of the django project">
+          </div>
+          <div class="proj_text" >
+            <p>Mini Art Wiki @ artwiki.wumengyan.com</p>
+            <p>2021 FALL</p><br>
+            <p>managing and displaying data with web application built by Django.</p>
+          </div>
+        </a>
+        
+        <a data-aos="fade-up" data-aos-duration="2000" class="project" id="blog" href="http://blog.wumengyan.com/" data-aos="fade-up" data-aos-duration="1100">
+          <div class="proj_img">
+            <img src="images/blog.png" alt="image of the blog project">
+          </div>
+          <div class="proj_text" >
+            <p>Personal Blog @ blog.wumengyan.com</p>
+            <p>2022 WINTER</p><br>
+            <p>storing my study notes with website supported by WordPress.</p>
+          </div>
+        </a>
+  
+
+      </div>
+      
+      <!-- <h2 data-aos="fade-up" data-aos-duration="2000">Experiences</h2>
       <div class="experience_list">
         <a data-aos="fade-up" data-aos-duration="2000" class="experience" id="mechmind" href="">
           <div class="experience_inner">
@@ -79,7 +150,7 @@
             • Reviewed lab reports (over 200 reports with 10 pages on average in one semester).<br>
           </p>
         </div>
-      </div>
+      </div> -->
 
     </main>
 
