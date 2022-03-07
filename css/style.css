@@ -148,6 +148,10 @@ align-self: center;
   background-color: #f7b5b5a1;
   color:#441919;
 }
+#chat {
+  background-color: #f7f3b5a1;
+  color:#444319;
+}
 #blog {
   background-color: #b5e2f7a1;
   color:#192f44;
