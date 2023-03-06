@@ -152,6 +152,14 @@ align-self: center;
   background-color: #f7f3b5a1;
   color:#444319;
 }
+#prob {
+  background-color: #c9b5f7a1;
+  color: #2a1944;
+}
+#recipe {
+  background-color: #b5f7f2a1;
+    color: #19443b;
+}
 #blog {
   background-color: #b5e2f7a1;
   color:#192f44;
