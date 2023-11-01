@@ -99,6 +99,12 @@ main h2{
   margin-top: 50vh;
   margin-bottom: 5vh;
 }
+main h3{
+  color: #4d5540;
+  font-size: 4vw;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
 /* Index End */
 
 /* Project */
@@ -187,8 +193,8 @@ align-self: center;
   background-position: 75% 25%; /* Parallax effect */
   background-size: cover; /* Parallax effect */
   color: white;
-  height: 800px; /* Parallax effect */
-  background-image: url("../images/about_header.JPG");
+  height: 200px; /* Parallax effect */
+  /* background-image: url("../images/about_header.JPG"); */
   background-repeat: no-repeat;
 }
 form{
